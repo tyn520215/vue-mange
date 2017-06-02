@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <ul>
-      <li v-for="item in items">
+      <li v-for="item in items" :key="item._id">
         <img  class="imgStyle"  :src="item.url"/>
       </li>
     </ul>
@@ -34,6 +34,7 @@
     width: 200px;
     height: 200px;
   }
+  .addmore{width: 120px;height: 40px;line-height: 40px;background-color: dodgerblue;border-radius: 5px;}
 h1, h2 {
   font-weight: normal;
 }
