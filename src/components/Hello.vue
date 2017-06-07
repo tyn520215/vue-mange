@@ -31,8 +31,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .imgStyle{
-    width: 200px;
-    height: 200px;
+    width: 10rem;
   }
   .addmore{width: 120px;height: 40px;line-height: 40px;background-color: dodgerblue;border-radius: 5px;}
 h1, h2 {
