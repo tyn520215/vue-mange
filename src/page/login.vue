@@ -1,7 +1,7 @@
 <template>
-    <div id="Login">
+    <div id="login">
       <div id="login_title">
-        <h2>后台管理系统</h2>
+        <h2>GakkiXiaoT</h2>
       </div>
       <el-form :model="loginFrom" :rules="rules" ref="loginFrom" label-width="100px" class="demo-ruleForm">
         <el-form-item label="用户名"  prop="username">
@@ -11,7 +11,7 @@
           <el-input type="password" placeholder="请输入用户名"  v-model="loginFrom.password"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm('loginFrom')">登录</el-button>
+          <el-button type="primary" class="login-button" @click="submitForm('loginFrom')">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -85,9 +85,14 @@
       width: 100px;
       height: 30px;
     }
+    .login-button{width: 200px;}
     a {
         color: #42b983;
     }
     .el-form-item{width: 300px;height: 50px;line-height: 50px;margin: 0 auto;margin-bottom: 20px;}
-  #login{margin-top: 150px;}
+  #login{    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);width: 500px;height: 300px;border: 1px solid #e3e3e3;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    padding: 20px;}
+    #login h2{margin-bottom: 60px;}
 </style>
