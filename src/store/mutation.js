@@ -2,6 +2,8 @@
  * Created by Administrator on 2017/6/2.
  */
 export const GET_AUDIT_DATA = 'GET_AUDIT_DATA';
+export const GET_AUDIT_ALLDATA = 'GET_AUDIT_ALLDATA';
+export const DELETE_AUDIT = 'DELETE_AUDIT';
 export const LOGIN_DATA = 'LOGIN_DATA';
 export const GET_EMPLOY_DATA = 'GET_EMPLOY_DATA';
 export const GET_LIMIT_DATA = 'GET_LIMIT_DATA';
@@ -13,9 +15,13 @@ export const GET_ORGAN_DATA = 'GET_ORGAN_DATA';
 
 export default {
   [GET_AUDIT_DATA](state, payload){
-    if(payload.code == 0){
-      state.auditSucceedList = payload.data
-    }
+      state.auditSucceedList.push(payload)
+  },
+  [GET_AUDIT_ALLDATA](state,payload){
+    state.auditSucceedList
+  },
+  [DELETE_AUDIT](state,index){
+    state.auditSucceedList.splice(index,1)
   },
   [LOGIN_DATA](state,payload){
     state.accessToken = payload.accessToken;

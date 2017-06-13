@@ -11,57 +11,11 @@ const state = {
   loginname:null,
   id:null,
   accessToken:null,
-  auditSucceedList:[
-    {
-    "companyCode": "sdfsd",
-    "companyName": "bbb",
-    "companyOid": 1
-  },
-    {
-      "companyCode": "sdfh",
-      "companyName": "ccc",
-      "companyOid": 2
-    },
-    {
-      "companyCode": "kld",
-      "companyName": "sdfsd",
-      "companyOid": 3
-    },
-    {
-      "companyCode": "aaa",
-      "companyName": "aaa",
-      "companyOid": 4
-    },
-    {
-      "companyCode": "ssssss",
-      "companyName": "ssssss",
-      "companyOid": 5
-    },
-    {
-      "companyCode": "12341234",
-      "companyName": "321234",
-      "companyOid": 6
-    },
-    {
-      "companyCode": "sssssss",
-      "companyName": "戈工要在地在2仍其中",
-      "companyOid": 7
-    },
-    {
-      "companyCode": "tttt",
-      "companyName": "niahi",
-      "companyOid": 8
-    },
-    {
-      "companyCode": "11",
-      "companyName": "1",
-      "companyOid": 9
-    },
-    {
-      "companyCode": "1",
-      "companyName": "1111111111111111",
-      "companyOid": 10
-    }],
+  auditSucceedList:[{
+    companyOid:'1',
+    companyName:'gakki',
+    companyCode:'tyernsd',
+  }],
   employList:[
     {
       "employeeOid": 1,
