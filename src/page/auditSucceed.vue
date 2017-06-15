@@ -42,6 +42,9 @@
 
       <el-dialog title="添加" :visible.sync="dialogFormVisible">
         <el-form :model="addFrom" ref="addFrom" :rules="rules">
+          <el-form-item label="序号" label-width="100px">
+            <el-input v-model="addFrom.companyOid" auto-complete="off"></el-input>
+          </el-form-item>
           <el-form-item label="公司名称" label-width="100px">
             <el-input v-model="addFrom.companyName" auto-complete="off"></el-input>
           </el-form-item>
@@ -65,7 +68,7 @@
       data(){
         return{
           addFrom:{
-            companyOid:'1',
+            companyOid:'',
             companyName:'',
             companyCode:'',
           },
@@ -90,11 +93,10 @@
         sureadd(formName){
           this.$refs[formName].validate((valid) => {
             if (valid) {
-              this.addFrom.companyOid++;
               this.$store.dispatch('sureadd', {...this.addFrom});
+              this.addFrom.companyOid = '';
               this.addFrom.companyCode = '';
               this.addFrom.companyName = '';
-              this.addFrom.companyOid = this.addFrom.companyOid++;
               this.dialogFormVisible = false
             }
           })

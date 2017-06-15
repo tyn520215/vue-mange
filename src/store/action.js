@@ -1,13 +1,20 @@
 /**
  * Created by Administrator on 2017/6/2.
  */
-import ajax from '../utils/ajax';
+import axios from 'axios';
 export default {
   sureadd({commit,state},addFrom){
+    console.log(addFrom)
         commit('GET_AUDIT_DATA',addFrom)
   },
   addAll({commit,state}){
-    commit('GET_AUDIT_ALLDATA')
+    axios.get('http://localhost:8080/api/audit')
+      .then(function (response) {
+        commit('GET_AUDIT_ALLDATA',response.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   },
   delete({commit,state},index){
     commit('DELETE_AUDIT',index)
@@ -16,12 +23,6 @@ export default {
     ajax('../jsonTest/audit.json').then(res =>{
       commit('GET_EMPLOY_DATA',res.data)
     })
-  },
-  login({commit,state},){
-    ajax('POST','http://192.168.2.25:8380/partner/manager/web/login.action',data).then(res =>{
-          commit('LOGIN_DATA',res)
-    })
-
   },
   partner({commit,state}){
       ajax('../jsonTest/audit.json').then(res =>{

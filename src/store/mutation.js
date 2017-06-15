@@ -18,7 +18,8 @@ export default {
       state.auditSucceedList.push(payload)
   },
   [GET_AUDIT_ALLDATA](state,payload){
-    state.auditSucceedList
+    console.log(payload.data)
+    state.auditSucceedList = payload.data
   },
   [DELETE_AUDIT](state,index){
     state.auditSucceedList.splice(index,1)
