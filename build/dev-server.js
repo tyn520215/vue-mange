@@ -22,6 +22,63 @@ var proxyTable = config.dev.proxyTable
 
 var app = express()
 var compiler = webpack(webpackConfig)
+var jsonData = require('../src/jsonTest/audit.json');
+var audit = jsonData.audit;
+var employ = jsonData.employ;
+var limit = jsonData.limit;
+var organ = jsonData.organ;
+var partner = jsonData.partner;
+var role = jsonData.role;
+var saleman = jsonData.saleman;
+
+var apiRouter = express.Router();
+
+apiRouter.get('/audit',function (req,res) {
+  res.json({
+    code:0,
+    data:audit
+  });
+});
+
+apiRouter.get('/employ',function (req,res) {
+  res.json({
+    code:0,
+    data:employ
+  });
+});
+
+apiRouter.get('/limit',function (req,res) {
+  res.json({
+    code:0,
+    data:limit
+  });
+});
+apiRouter.get('/organ',function (req,res) {
+  res.json({
+    code:0,
+    data:organ
+  });
+});
+apiRouter.get('/partner',function (req,res) {
+  res.json({
+    code:0,
+    data:partner
+  });
+});
+apiRouter.get('/role',function (req,res) {
+  res.json({
+    code:0,
+    data:role
+  });
+});
+apiRouter.get('/saleman',function (req,res) {
+  res.json({
+    code:0,
+    data:saleman
+  });
+});
+
+app.use('/api',apiRouter);
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
