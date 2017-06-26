@@ -1,4 +1,5 @@
 {
+  "code":0,
   "audit": [
     {
       "companyCode": "sdfsd",
@@ -49,6 +50,36 @@
       "companyCode": "1",
       "companyName": "1111111111111111",
       "companyOid": 10
+    },
+    {
+      "companyCode": "sdfd",
+      "companyName": "bbhb",
+      "companyOid": 1
+    },
+    {
+      "companyCode": "yyy",
+      "companyName": "basdbb",
+      "companyOid": 1
+    },
+    {
+      "companyCode": "ggg",
+      "companyName": "bbb",
+      "companyOid": 1
+    },
+    {
+      "companyCode": "sdfs98d",
+      "companyName": "bbbdf",
+      "companyOid": 1
+    },
+    {
+      "companyCode": "sdy7fsd",
+      "companyName": "bxbb",
+      "companyOid": 1
+    },
+    {
+      "companyCode": "sdfs7d",
+      "companyName": "b8bb",
+      "companyOid": 1
     }
   ],
   "partner": [
@@ -181,68 +212,11 @@
       "starLevelName": "6星"
     }
   ],
-  "employ": [
-    {
-      "employeeOid": 1,
-      "name": "admin",
-      "roleName": "系统管理员角色",
-      "roleOid": 1
-    },
-    {
-      "employeeOid": 2,
-      "name": "BMD",
-      "roleName": "业务管理部",
-      "roleOid": 2
-    },
-    {
-      "employeeOid": 3,
-      "name": "LCR",
-      "roleName": "法律合规审查组",
-      "roleOid": 3
-    },
-    {
-      "employeeOid": 4,
-      "name": "PMA",
-      "roleName": "产品市场分析组",
-      "roleOid": 4
-    },
-    {
-      "employeeOid": 5,
-      "name": "FA",
-      "roleName": "财报分析组",
-      "roleOid": 5
-    },
-    {
-      "employeeOid": 6,
-      "name": "BA",
-      "roleName": "企业经营分析组",
-      "roleOid": 6
-    },
-    {
-      "employeeOid": 7,
-      "name": "ST",
-      "roleName": "现场考察组",
-      "roleOid": 7
-    },
-    {
-      "employeeOid": 8,
-      "name": "RM",
-      "roleName": "风险管理会副主任",
-      "roleOid": 8
-    },
-    {
-      "employeeOid": 9,
-      "name": "RMO",
-      "roleName": "风险管理会主任",
-      "roleOid": 9
-    },
-    {
-      "employeeOid": 10,
-      "name": "多个实施大幅",
-      "roleName": "风险管理会主任",
-      "roleOid": 9
-    }
-  ],
+  "employ": [{
+    "employName":"Gakki",
+    "employJoinDate":"2017-03-02",
+    "employCode":"GakkiGakki"
+  }],
   "role": [
     {
       "employeeOid": 1,

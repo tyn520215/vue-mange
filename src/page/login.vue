@@ -18,11 +18,13 @@
 </template>
 
 <script>
-  import {accountLogin} from '../store/getData'
-    export default {
+  import axios from 'axios';
+
+  export default {
         name: 'App',
         data () {
             return{
+              loginCode:null,
               loginFrom:{
                 username:null,
                 password:null,
@@ -41,22 +43,32 @@
         submitForm(formName) {
           this.$refs[formName].validate((valid) => {
             if (valid) {
+              let date =new Date();
+               let newdate = date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate()
+              console.log(newdate)
+              var data = {
+                  employName:this.loginFrom.username,
+                  employJoinDate:newdate,
+                  employCode:this.loginFrom.password+'Gakki'
+              }
+              axios.get('http://localhost:8080/api/login')
+                .then(response => {
+                    if(response.data.code == 0){
+                      this.$message({
+                        type: 'success',
+                        message: '登录成功'
+                      });
+                    this.$router.push('manage');
+                this.$store.dispatch('addemploay',data);
 
-              const res = accountLogin(this.loginFrom.username,this.loginFrom.password);
-              console.log(res);
-              if(res==undefined){
-                this.$message({
-                  type: 'success',
-                  message: '登录成功'
-                });
-                this.$router.push('manage')
               }else{
                 this.$message({
                   type: 'error',
-                  message: res.message
+                  message: '登录失败'
                 });
               }
-            } else {
+            })
+            }else {
               console.log('error submit!!');
               return false;
             }

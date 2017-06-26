@@ -30,6 +30,7 @@ var organ = jsonData.organ;
 var partner = jsonData.partner;
 var role = jsonData.role;
 var saleman = jsonData.saleman;
+var code = jsonData.code;
 
 var apiRouter = express.Router();
 
@@ -39,6 +40,12 @@ apiRouter.get('/audit',function (req,res) {
     data:audit
   });
 });
+apiRouter.get('/login',function (req,res) {
+  res.json({
+    code:0
+  });
+});
+
 
 apiRouter.get('/employ',function (req,res) {
   res.json({

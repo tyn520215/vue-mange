@@ -1,23 +1,26 @@
 /**
  * Created by Administrator on 2017/6/5.
  */
-import ajax from '../utils/ajax';
+import axios from 'axios';
 
 /**
  * 账号密码登录
  */
-export const accountLogin = (username, password) => {
-    let data = {
-      'employeeDTO.name':username,
-      'employeeDTO.password':password
-    };
-    ajax('POST','http://localhost:8380/partner/manager/web/login.action',data,false)
-      .then(res =>{
-        console.log(res)
+export const accountLogin = () => {
+  let resulte = '';
+  axios.get('http://localhost:8080/api/login')
+    .then(response => {
+      resulte = response.data.code;
+      return resulte;
+      // return JSON.parse(response).data.code;
     })
+    .catch(function (error) {
+      console.log(error);
+    });
 };
 
 
 /**
  * 退出登录
  */
+

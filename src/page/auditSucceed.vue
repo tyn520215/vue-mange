@@ -39,7 +39,6 @@
           </template>
         </el-table-column>
       </el-table>
-
       <el-dialog title="添加" :visible.sync="dialogFormVisible">
         <el-form :model="addFrom" ref="addFrom" :rules="rules">
           <el-form-item label="序号" label-width="100px">

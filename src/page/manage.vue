@@ -7,11 +7,11 @@
             <el-submenu index="2">
               <template slot="title"><i class="el-icon-document"></i>机构审批</template>
               <el-menu-item index="auditSucceed">机构列表</el-menu-item>
-              <el-menu-item index="employeeList">额度配置表</el-menu-item>
+              <el-menu-item index="limitDispose">额度配置表</el-menu-item>
             </el-submenu>
             <el-submenu index="3">
               <template slot="title"><i class="el-icon-plus"></i>机构管理</template>
-              <el-menu-item index="limitDispose">员工列表</el-menu-item>
+              <el-menu-item index="employeeList">员工列表</el-menu-item>
               <el-menu-item index="organizationList">业务员列表</el-menu-item>
               <el-menu-item index="roleList">角色列表</el-menu-item>
               <el-menu-item index="salesmanList">合作方列表</el-menu-item>

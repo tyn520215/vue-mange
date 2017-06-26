@@ -3,9 +3,11 @@
  */
 export const GET_AUDIT_DATA = 'GET_AUDIT_DATA';
 export const GET_AUDIT_ALLDATA = 'GET_AUDIT_ALLDATA';
+export const GET_EMPLOY_DATA = 'GET_EMPLOY_DATA';
+export const GET_LOGIN = 'GET_LOGIN';
 export const DELETE_AUDIT = 'DELETE_AUDIT';
 export const LOGIN_DATA = 'LOGIN_DATA';
-export const GET_EMPLOY_DATA = 'GET_EMPLOY_DATA';
+export const GET_ADDEMPLOY_DATA = 'GET_ADDEMPLOY_DATA';
 export const GET_LIMIT_DATA = 'GET_LIMIT_DATA';
 export const GET_ROLE_DATA = 'GET_ROLE_DATA';
 export const GET_SALESMAN_DATA = 'GET_SALESMAN_DATA';
@@ -14,12 +16,19 @@ export const GET_ORGAN_DATA = 'GET_ORGAN_DATA';
 
 
 export default {
+  [GET_LOGIN](state,payload){
+    state.code = 0
+  },
   [GET_AUDIT_DATA](state, payload){
       state.auditSucceedList.push(payload)
   },
   [GET_AUDIT_ALLDATA](state,payload){
-    console.log(payload.data)
     state.auditSucceedList = payload.data
+  },
+  [GET_ADDEMPLOY_DATA](state, payload){
+    state.employList.push(payload)
+    console.log(state.employList);
+
   },
   [DELETE_AUDIT](state,index){
     state.auditSucceedList.splice(index,1)

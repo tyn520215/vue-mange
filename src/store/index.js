@@ -8,11 +8,16 @@ import mutations from '../store/mutation';
 
 Vue.use(Vuex);
 const state = {
+  code:null,
   loginname:null,
   id:null,
   accessToken:null,
   auditSucceedList:null,
-  employList:null,
+  employList:[{
+  "employName":"Gakki",
+  "employJoinDate":"2017-03-02",
+  "employCode":"GakkiGakki"
+}],
   limit:null,
   roleList:null,
   salemanList:null,
