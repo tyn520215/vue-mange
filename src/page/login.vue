@@ -44,7 +44,7 @@
           this.$refs[formName].validate((valid) => {
             if (valid) {
               let date =new Date();
-               let newdate = date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate()
+               let newdate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()
               console.log(newdate)
               var data = {
                   employName:this.loginFrom.username,
