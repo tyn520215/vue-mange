@@ -9,3 +9,7 @@
 
 ### 列表增加删除
  <img src="src/image/add.gif" width="1000" height="619"/>
+
+
+### 在员工列表中可以看到刚刚登陆进来的人的信息
+ <img src="src/image/shwo.gif" width="1000" height="619"/>
